@@ -4,14 +4,18 @@ interface Props {
   price: number;
 }
 import "./Card.css";
-const Card = ({ companyName, ticker, price }: Props) => {
+const Card: React.FC<Props> = ({
+  companyName,
+  ticker,
+  price,
+}: Props): JSX.Element => {
   return (
     <div className="Card">
       <img src="../../assets/dummy.png" alt="apple pic" />
-      <h1>{companyName}</h1>
-      <h3>{ticker}</h3>
-      <h3>{price}</h3>
-      
+      <h1>
+        {companyName} ({ticker})
+      </h1>
+      <p>{price}</p>
     </div>
   );
 };
