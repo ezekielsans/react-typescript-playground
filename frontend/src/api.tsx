@@ -9,12 +9,13 @@ export const searchCompanies = async (query: string) => {
   try {
 
 
-    const apiKey = import.meta.env.REACT__APP_API_KEY;
-    console.log("apiKey: ",apiKey);
+    const apiKey = import.meta.env.VITE_API_KEY;
+    //console.log("apiKey: ",apiKey);
 
     const {data} = await axios.get<SearchResponse>(
-      `https://financialmodelingprep.com/api/v3/search-ticker?query=${query}&limit=10&exchange=NASDAQ&apikey=QnkmpfdZsHVzIWVWqqbNIxIrn0jjhxNT`
-      //`https://financialmodelingprep.com/api/v3/cik-search/Berkshire?apikey=${process.env.REACT_APP_API_KEY}`
+     
+      `https://financialmodelingprep.com/api/v3/search-ticker?query=${query}&limit=10&exchange=NASDAQ&apikey=${apiKey}`
+     
     );
 
     return data;

@@ -6,7 +6,7 @@ import { searchCompanies } from "./api.tsx";
 
 
 
-console.log(searchCompanies("TSLA"));
+//console.log(searchCompanies("TSLA"));
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
